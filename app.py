@@ -22,7 +22,7 @@ if password != "STEM2026":
     st.stop()
 
 # ---------------- HEADER ----------------
-st.title("🦋 Butterfly Classifier")
+st.title("🦋 QAdams Butterfly Classifier")
 
 # ---------------- FUNCTION ----------------
 def call_model_endpoint(image_bytes: bytes):
