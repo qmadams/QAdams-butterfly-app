@@ -14,18 +14,7 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown("""
-<style>
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(15px);}
-  to {opacity: 1; transform: translateY(0);}
-}
 
-.block-container {
-  animation: fadeIn 0.8s ease-in-out;
-}
-</style>
-""", unsafe_allow_html=True)
 # ---------------- SIMPLE LOGIN ----------------
 password = st.text_input("Enter access code", type="password")
 
