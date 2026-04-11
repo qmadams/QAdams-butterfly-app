@@ -2,6 +2,21 @@ import base64
 import requests
 import streamlit as st
 
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if not st.session_state.logged_in:
+    st.write("Please log in")
+else:
+    st.write("Welcome!")
+    
+st.title("My App")
+
+if not st.session_state.logged_in:
+    if st.button("Log In"):
+        st.session_state.logged_in = True
+        st.rerun()
 # ──────────────────────────────────────────────────────────────────────────────
 # Clean + Responsive Streamlit OIDC Starter + CNN Endpoint Prediction
 # - White background, sans-serif font stack (incl. Helvetica Neue)
@@ -212,7 +227,7 @@ with tabs[0]:
     card_close()
 
     card_open()
-    if not st.user.is_logged_in:
+    if not st.session_state.logged_in:
         st.write("Status: **Not signed in**")
         if st.button("Log in with Google", type="primary"):
             st.login()
