@@ -6,7 +6,14 @@ import streamlit as st
 ENDPOINT_URL = "https://askai.aiclub.world/f6c44628-dab2-418f-8840-2f646738cdd8"
 
 st.set_page_config(page_title="Butterfly Classifier", layout="centered")
-
+st.markdown("""
+<style>
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe, #bae6fd);
+    color: #111827;
+}
+</style>
+""", unsafe_allow_html=True)
 # ---------------- SIMPLE LOGIN ----------------
 password = st.text_input("Enter access code", type="password")
 
